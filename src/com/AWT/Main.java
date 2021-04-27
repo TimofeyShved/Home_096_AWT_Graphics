@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.geom.Arc2D;
+import java.awt.geom.CubicCurve2D;
 
 public class Main extends Frame {
 
@@ -18,7 +19,7 @@ public class Main extends Frame {
     }
 
     private void prepareGUI(){
-        setSize(400,400); // размеры
+        setSize(800,400); // размеры
         addWindowListener(new WindowAdapter() { // действие на закрытие окна
             public void windowClosing(WindowEvent windowEvent){
                 System.exit(0);
@@ -35,16 +36,21 @@ public class Main extends Frame {
 
         Graphics2D g2 = (Graphics2D) g; // создание рисунка
         g2.setColor(Color.gray); // цвет
-        g2.draw(arc); // граница
+        g2.draw(arc); // прорисовка Arc2D
         g2.setColor(Color.red);
         g2.fill(arc); // заливка
         g2.setColor(Color.black);
 
+        CubicCurve2D сubicCurve2D = new CubicCurve2D.Float(); // ------------------------------ создание CubicCurve2D
+        сubicCurve2D.setCurve(250F,270F,320F,220F,340F,170F,370F,230F); // размеры
+        g2.draw (сubicCurve2D); // прорисовка CubicCurve2D
+
         Font font = new Font("Serif", Font.PLAIN, 24);// шрифт
         g2.setFont(font);
-        
+
         // наши заголовки
         g.drawString("Фигуры:", 50, 70);
         g2.drawString("Arc2D.PIE", 100, 120);
+        g2.drawString("CubicCurve2D.PIE", 250, 120);
     }
 }
