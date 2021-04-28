@@ -5,6 +5,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.geom.Arc2D;
 import java.awt.geom.CubicCurve2D;
+import java.awt.geom.Ellipse2D;
 
 public class Main extends Frame {
 
@@ -29,7 +30,7 @@ public class Main extends Frame {
 
     @Override
     public void paint(Graphics g) {
-        Arc2D.Float arc = new Arc2D.Float(Arc2D.PIE); // ------------------------------ создание Arc2D
+        Arc2D.Float arc = new Arc2D.Float(Arc2D.PIE); // ------------------------------------- создание Arc2D
         arc.setFrame(70, 200, 150, 150);// размеры
         arc.setAngleStart(0);
         arc.setAngleExtent(145);
@@ -44,6 +45,10 @@ public class Main extends Frame {
         CubicCurve2D сubicCurve2D = new CubicCurve2D.Float(); // ------------------------------ создание CubicCurve2D
         сubicCurve2D.setCurve(250F,270F,320F,220F,340F,170F,370F,230F); // размеры
         g2.draw (сubicCurve2D); // прорисовка CubicCurve2D
+
+        Ellipse2D ellipse2D = new Ellipse2D.Float(); // ---------------------------------------- создание Ellipse2D
+        ellipse2D.setFrame(100, 150, 200,100); // размеры
+        g2.draw (ellipse2D); // прорисовка Ellipse2D
 
         Font font = new Font("Serif", Font.PLAIN, 24);// шрифт
         g2.setFont(font);
