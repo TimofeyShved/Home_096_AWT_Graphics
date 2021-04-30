@@ -49,4 +49,30 @@ public abstract class CubicCurve2D
 public abstract class Ellipse2D
    extends RectangularShape
  
+-------------------------------------
+# Ellipse2D
+
+Вступление
+Класс Ellipse2D определяет эллипс, который определяется обрамляющим прямоугольником.
+
+Объявление класса
+Ниже приводится объявление класса java.awt.geom.Ellipse2D :
+------------------------
+
+public abstract class Ellipse2D
+   extends RectangularShape
+ 
+-------------------------------------
+# Rectangle2D
+
+Вступление
+Класс Rectangle2D определяет прямоугольник, определяемый местоположением (x, y) и размером (wxh).
+
+Объявление класса
+Ниже приводится объявление класса java.awt.geom.Rectangle2D :
+------------------------
+
+public abstract class Rectangle2D
+   extends RectangularShape
+ 
  ------------------------
