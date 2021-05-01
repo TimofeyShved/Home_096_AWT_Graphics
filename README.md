@@ -89,4 +89,18 @@ public abstract class Line2D
    extends Object
       implements Shape, Cloneable
  
+-------------------------------------
+# Font  
+
+Вступление
+Класс Font устанавливает шрифты, которые используются для визуализации текста видимым образом.
+
+Объявление класса
+Ниже приводится объявление класса java.awt.Font :
+------------------------
+
+public class Font
+   extends Object
+      implements Serializable
+ 
  ------------------------

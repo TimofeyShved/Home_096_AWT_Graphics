@@ -56,6 +56,19 @@ public class Main extends Frame {
         line.setLine(100,320,200,350);// размеры
         g2.draw (line); // прорисовка Line2D
 
+        Font plainFont = new Font("Serif", Font.PLAIN, 24); // ---------------------------------------- создание Font
+        g2.setFont(plainFont);
+        g2.drawString("Font PLAIN", 250, 300);
+        Font italicFont = new Font("Serif", Font.ITALIC, 24);
+        g2.setFont(italicFont);
+        g2.drawString("Font ITALIC", 250, 325);
+        Font boldFont = new Font("Serif", Font.BOLD, 24);
+        g2.setFont(boldFont);
+        g2.drawString("Fon BOLD", 250, 350);
+        Font boldItalicFont = new Font("Serif", Font.BOLD+Font.ITALIC, 24);
+        g2.setFont(boldItalicFont);
+        g2.drawString("BOLD + ITALIC", 250, 375);
+
         Font font = new Font("Serif", Font.PLAIN, 24);// шрифт
         g2.setFont(font);
 
