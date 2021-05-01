@@ -3,10 +3,7 @@ package com.AWT;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.geom.Arc2D;
-import java.awt.geom.CubicCurve2D;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 
 public class Main extends Frame {
 
@@ -55,6 +52,10 @@ public class Main extends Frame {
         rectangle2D.setFrame(650, 150, 100,100);  // размеры
         g2.draw (rectangle2D); // прорисовка Rectangle2D
 
+        Line2D line = new Line2D.Double();// ---------------------------------------- создание Rectangle2D
+        line.setLine(100,320,200,350);// размеры
+        g2.draw (line); // прорисовка Line2D
+
         Font font = new Font("Serif", Font.PLAIN, 24);// шрифт
         g2.setFont(font);
 
@@ -64,5 +65,6 @@ public class Main extends Frame {
         g2.drawString("CubicCurve2D.PIE", 250, 120);
         g2.drawString("Ellipse2D.PIE", 475, 120);
         g2.drawString("Rectangle2D.PIE", 650, 120);
+        g2.drawString("Line2D.PIE", 100, 300);
     }
 }
