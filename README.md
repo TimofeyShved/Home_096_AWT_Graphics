@@ -75,4 +75,18 @@ public abstract class Ellipse2D
 public abstract class Rectangle2D
    extends RectangularShape
  
+-------------------------------------
+# Line2D 
+
+Вступление
+Класс Line2D устанавливает сегмент линии в координатном пространстве (x, y).
+
+Объявление класса
+Ниже приводится объявление класса java.awt.geom.Line2D :
+------------------------
+
+public abstract class Line2D
+   extends Object
+      implements Shape, Cloneable
+ 
  ------------------------
