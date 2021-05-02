@@ -69,15 +69,24 @@ public class Main extends Frame {
         g2.setFont(boldItalicFont);
         g2.drawString("BOLD + ITALIC", 250, 375);
 
+        g2.setColor(Color.red); // ---------------------------------------- установка цвета - Color
+        g2.drawString("Color.red", 470, 325);
+        g2.setColor(Color.green);
+        g2.drawString("Color.green", 470, 350);
+        g2.setColor(Color.getHSBColor(2,2,2));
+        g2.drawString("Color.getHSBColor(2,2,2)", 470, 375);
+
         Font font = new Font("Serif", Font.PLAIN, 24);// шрифт
         g2.setFont(font);
 
         // наши заголовки
+        g2.setColor(Color.black);
         g.drawString("Фигуры:", 50, 70);
         g2.drawString("Arc2D.PIE", 100, 120);
         g2.drawString("CubicCurve2D.PIE", 250, 120);
         g2.drawString("Ellipse2D.PIE", 475, 120);
         g2.drawString("Rectangle2D.PIE", 650, 120);
         g2.drawString("Line2D.PIE", 100, 300);
+        g2.drawString("Color", 470, 300);
     }
 }
