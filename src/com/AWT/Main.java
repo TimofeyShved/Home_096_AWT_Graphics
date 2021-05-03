@@ -18,7 +18,7 @@ public class Main extends Frame {
     }
 
     private void prepareGUI(){
-        setSize(900,400); // размеры
+        setSize(1200,400); // размеры
         addWindowListener(new WindowAdapter() { // действие на закрытие окна
             public void windowClosing(WindowEvent windowEvent){
                 System.exit(0);
@@ -52,7 +52,11 @@ public class Main extends Frame {
         rectangle2D.setFrame(650, 150, 100,100);  // размеры
         g2.draw (rectangle2D); // прорисовка Rectangle2D
 
-        Line2D line = new Line2D.Double();// ---------------------------------------- создание Rectangle2D
+        RoundRectangle2D rectangle2D2 = new RoundRectangle2D.Double();// ---------------------------------------- создание RoundRectangle2D
+        rectangle2D2.setRoundRect(850, 150, 100,100, 100, 35);  // размеры
+        g2.draw (rectangle2D2); // прорисовка Rectangle2D
+
+        Line2D line = new Line2D.Double();// ---------------------------------------- создание Line2D
         line.setLine(100,320,200,350);// размеры
         g2.draw (line); // прорисовка Line2D
 
