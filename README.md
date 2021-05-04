@@ -103,4 +103,19 @@ public class Font
    extends Object
       implements Serializable
  
- ------------------------
+-------------------------------------
+# Color 
+
+Вступление
+Класс Color устанавливает цвета в цветовом пространстве sRGB по умолчанию или цвета в произвольных цветовых пространствах, идентифицированных ColorSpace.
+
+Объявление класса
+Ниже приводится объявление класса java.awt.Color:
+
+------------------------
+
+public class Color
+   extends Object
+      implements Paint, Serializable
+      
+------------------------
