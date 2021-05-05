@@ -18,7 +18,7 @@ public class Main extends Frame {
     }
 
     private void prepareGUI(){
-        setSize(1200,400); // размеры
+        setSize(1200,800); // размеры
         addWindowListener(new WindowAdapter() { // действие на закрытие окна
             public void windowClosing(WindowEvent windowEvent){
                 System.exit(0);
@@ -28,7 +28,7 @@ public class Main extends Frame {
 
     @Override
     public void paint(Graphics g) {
-        Arc2D.Float arc = new Arc2D.Float(Arc2D.PIE); // ------------------------------------- создание Arc2D
+        Arc2D.Float arc = new Arc2D.Float(Arc2D.PIE); // ---------------------------------------- создание Arc2D
         arc.setFrame(70, 150, 150, 150);// размеры
         arc.setAngleStart(0);
         arc.setAngleExtent(145);
@@ -52,15 +52,15 @@ public class Main extends Frame {
         rectangle2D.setFrame(650, 150, 100,100);  // размеры
         g2.draw (rectangle2D); // прорисовка Rectangle2D
 
-        RoundRectangle2D rectangle2D2 = new RoundRectangle2D.Double();// ---------------------------------------- создание RoundRectangle2D
+        RoundRectangle2D rectangle2D2 = new RoundRectangle2D.Double();// ----------------------------- создание RoundRectangle2D
         rectangle2D2.setRoundRect(850, 150, 100,100, 100, 35);  // размеры
         g2.draw (rectangle2D2); // прорисовка Rectangle2D
 
-        Line2D line = new Line2D.Double();// ---------------------------------------- создание Line2D
+        Line2D line = new Line2D.Double();// ---------------------------------------------------------- создание Line2D
         line.setLine(100,320,200,350);// размеры
         g2.draw (line); // прорисовка Line2D
 
-        Font plainFont = new Font("Serif", Font.PLAIN, 24); // ---------------------------------------- создание Font
+        Font plainFont = new Font("Serif", Font.PLAIN, 24); // ---------------------------- создание Font
         g2.setFont(plainFont);
         g2.drawString("Font PLAIN", 250, 300);
         Font italicFont = new Font("Serif", Font.ITALIC, 24);
@@ -92,5 +92,16 @@ public class Main extends Frame {
         g2.drawString("Rectangle2D.PIE", 650, 120);
         g2.drawString("Line2D.PIE", 100, 300);
         g2.drawString("Color", 470, 300);
+
+        //-------------------------------------------------------------------------------Area-----------------------------------------------------------
+
+        g.drawString("Area:", 50, 450);
+
+        Area area1 = new Area( //создание Area
+                new Rectangle2D.Double(50, 500, 100, 100)  // размеры
+        );
+        area1.add(new Area(new Ellipse2D.Double(100, 550, 100, 100)));// размеры
+        g2.draw (area1); // прорисовка Area
+
     }
 }
