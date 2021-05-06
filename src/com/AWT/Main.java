@@ -107,5 +107,10 @@ public class Main extends Frame {
         area2.add(new Area(new Rectangle2D.Double(250, 500, 100, 100)));
         area2.subtract(new Area(new Ellipse2D.Double(300, 550, 100, 100)));
         g2.draw (area2); // прорисовка Area
+
+        Area area3 = new Area();//создание Area
+        area3.add(new Area(new Rectangle2D.Double(450, 500, 100, 100)));
+        area3.intersect(new Area(new Ellipse2D.Double(500, 550, 100, 100)));
+        g2.draw (area3); // прорисовка Area
     }
 }
