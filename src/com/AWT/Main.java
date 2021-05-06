@@ -102,15 +102,24 @@ public class Main extends Frame {
         );
         area1.add(new Area(new Ellipse2D.Double(100, 550, 100, 100)));// размеры
         g2.draw (area1); // прорисовка Area
+        g2.fill(area1); // заливка
 
         Area area2 = new Area();//создание Area
         area2.add(new Area(new Rectangle2D.Double(250, 500, 100, 100)));
         area2.subtract(new Area(new Ellipse2D.Double(300, 550, 100, 100)));
         g2.draw (area2); // прорисовка Area
+        g2.fill(area2); // заливка
 
         Area area3 = new Area();//создание Area
         area3.add(new Area(new Rectangle2D.Double(450, 500, 100, 100)));
         area3.intersect(new Area(new Ellipse2D.Double(500, 550, 100, 100)));
         g2.draw (area3); // прорисовка Area
+        g2.fill(area3); // заливка
+
+        Area area4 = new Area();//создание Area
+        area4.add(new Area(new Rectangle2D.Double(650, 500, 100, 100)));
+        area4.exclusiveOr(new Area(new Ellipse2D.Double(700, 550, 100, 100)));
+        g2.draw (area4); // прорисовка Area
+        g2.fill(area4); // заливка
     }
 }
