@@ -121,5 +121,20 @@ public class Main extends Frame {
         area4.exclusiveOr(new Area(new Ellipse2D.Double(700, 550, 100, 100)));
         g2.draw (area4); // прорисовка Area
         g2.fill(area4); // заливка
+
+        //-------------------------------------------------------------------------------Stroke-----------------------------------------------------------
+        g.drawString("Stroke:", 50, 700);
+        g2.setStroke(new BasicStroke(15f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER));
+        Line2D line1 = new Line2D.Double(50, 750, 100, 750);
+        g2.draw(line1);
+        g2.setStroke(new BasicStroke(15f, BasicStroke.JOIN_ROUND, BasicStroke.JOIN_MITER));
+        Line2D line2 = new Line2D.Double(50, 775, 100, 775);
+        g2.draw(line2);
+        g2.setStroke(new BasicStroke(15f, BasicStroke.CAP_SQUARE, BasicStroke.JOIN_MITER));
+        Line2D line3 = new Line2D.Double(150, 750, 200, 750);
+        g2.draw(line3);
+        g2.setStroke(new BasicStroke(15f, BasicStroke.JOIN_ROUND, BasicStroke.JOIN_MITER, 10f, new float[]{12,20}, 0)); // 12 ширина, 20 растояние до след.
+        Line2D line4 = new Line2D.Double(150, 775, 200, 775);
+        g2.draw(line4);
     }
 }
