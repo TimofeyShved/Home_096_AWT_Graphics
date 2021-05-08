@@ -1,9 +1,12 @@
 package com.AWT;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.geom.*;
+import java.io.File;
+import java.io.IOException;
 
 public class Main extends Frame {
 
@@ -79,6 +82,26 @@ public class Main extends Frame {
         g2.drawString("Color.green", 470, 350);
         g2.setColor(Color.getHSBColor(2,2,2));
         g2.drawString("Color.getHSBColor(2,2,2)", 470, 375);
+
+        g2.setColor(Color.blue);
+        Rectangle2D rectangleColor1 = new Rectangle2D.Float();// создание Rectangle2D - Color
+        rectangleColor1.setFrame(750, 275, 50,100);  // размеры
+        g2.fill (rectangleColor1); // прорисовка Rectangle2D
+
+        g2.setPaint(new GradientPaint(new Point(845, 275), Color.red, new Point(845, 375), Color.yellow));
+        Rectangle2D rectangleColor2 = new Rectangle2D.Float();// создание Rectangle2D - Color
+        rectangleColor2.setFrame(820, 275, 50,100);  // размеры
+        g2.fill (rectangleColor2); // прорисовка Rectangle2D
+
+        try {
+            g2.setPaint(new TexturePaint(ImageIO.read(new File("1.png")), new Rectangle2D.Double(890, 275, 25,25)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Rectangle2D rectangleColor3 = new Rectangle2D.Float();// создание Rectangle2D - Color
+        rectangleColor3.setFrame(890, 275, 50,100);  // размеры
+        g2.fill (rectangleColor3); // прорисовка Rectangle2D
+
 
         Font font = new Font("Serif", Font.PLAIN, 24);// шрифт
         g2.setFont(font);
